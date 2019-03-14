@@ -20,7 +20,7 @@ public class UploadFileAndFindGenere {
 		System.out.println("Os Name : "+System.getProperty("os.name"));
 		if(System.getProperty("os.name").toLowerCase().contains("windows")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver.exe");
-		}else if(System.getProperty("os.name").toLowerCase().contains("ubuntu")){
+		}else if(System.getProperty("os.name").toLowerCase().contains("linux")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver");
 		}
 		
