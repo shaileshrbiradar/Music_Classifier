@@ -8,6 +8,14 @@
   <packaging>jar</packaging>
   
   <name>Music_Classifier</name>
+  
+  <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <aws-java-sdk.version>1.11.158</aws-java-sdk.version>
+        <selenium.version>3.8.1</selenium.version>
+    </properties>
+    
     <build>
     	
         <!-- Source directory configuration -->
