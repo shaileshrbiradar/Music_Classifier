@@ -27,7 +27,7 @@ public class UploadFileAndFindGenere {
 		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://localhost:8000/");
+		driver.get("http://localhost:8001/");
 		System.out.println("Title of the page : "+driver.getTitle());
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Upload File']/parent::span")));
