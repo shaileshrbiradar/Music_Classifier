@@ -35,7 +35,7 @@ public class UploadFileAndFindGenere {
 		
 		Thread.sleep(5000);		
 		
-		System.out.println("Path : "+System.getProperty("user.dir")+"\\"+"file_example_WAV_2MG.wav");
+		System.out.println("Path : "+System.getProperty("user.dir")+"/"+"file_example_WAV_2MG.wav");
 		
 		//put path to your image in a clipboard
 	    StringSelection ss = new StringSelection(System.getProperty("user.dir")+"\\"+"file_example_WAV_2MG.wav");
