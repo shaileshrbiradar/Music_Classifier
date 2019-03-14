@@ -24,7 +24,6 @@ public class UploadFileAndFindGenere {
 		}else if(System.getProperty("os.name").toLowerCase().contains("linux")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver");
 		}
-		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://localhost:8001/");
@@ -38,7 +37,7 @@ public class UploadFileAndFindGenere {
 		System.out.println("Path : "+System.getProperty("user.dir")+"/"+"file_example_WAV_2MG.wav");
 		
 		//put path to your image in a clipboard
-	    StringSelection ss = new StringSelection(System.getProperty("user.dir")+"\\"+"file_example_WAV_2MG.wav");
+	    StringSelection ss = new StringSelection(System.getProperty("user.dir")+"/"+"file_example_WAV_2MG.wav");
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
 	    //imitate mouse events like ENTER, CTRL+C, CTRL+V
