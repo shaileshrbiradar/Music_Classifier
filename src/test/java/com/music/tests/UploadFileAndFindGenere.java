@@ -50,6 +50,8 @@ public class UploadFileAndFindGenere {
 	    robot.keyRelease(KeyEvent.VK_CONTROL);
 	    robot.keyPress(KeyEvent.VK_ENTER);
 	    robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.keyPress(KeyEvent.VK_ENTER);
+	    robot.keyRelease(KeyEvent.VK_ENTER);
 		
 	    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Cancel']/parent::button[@style='display: none;']")));
 	    driver.findElement(By.xpath("//button[@id='find']")).click();
