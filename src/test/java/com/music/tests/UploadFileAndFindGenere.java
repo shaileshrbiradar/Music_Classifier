@@ -29,7 +29,6 @@ public class UploadFileAndFindGenere {
 		//options.addArguments("--no-sandbox");
 		options.setBinary("/usr/bin/google-chrome");
 		driver = new ChromeDriver(options);
-		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://localhost:8001/");
 		System.out.println("Title of the page : "+driver.getTitle());
