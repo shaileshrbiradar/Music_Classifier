@@ -24,7 +24,6 @@ public class UploadFileAndFindGenere {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver.exe");
 		}else if(System.getProperty("os.name").toLowerCase().contains("linux")){
 			System.setProperty("webdriver.chrome.driver", "/usr/bin/"+"chromedriver");
-			Thread.sleep(20000);
 			//System.getProperty("user.dir")+"/"+"chromedriver"
 		}
 		/*ChromeOptions options = new ChromeOptions();
@@ -38,9 +37,10 @@ public class UploadFileAndFindGenere {
 		options.setBinary("/usr/bin/google-chrome");*/
 
 		driver = new ChromeDriver();
-		Thread.sleep(20000);
 		driver.manage().window().maximize();
+/*
 		driver.get("http://localhost:8001/");
+
 		System.out.println("Title of the page : "+driver.getTitle());
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Upload File']/parent::span")));
@@ -74,6 +74,7 @@ public class UploadFileAndFindGenere {
 	    Thread.sleep(5000);
 	    
 	    driver.quit();
+*/
 	}
 	
 }
