@@ -2,7 +2,7 @@
 <suite name="example suite 1" verbose="1" >
   <test name="Regression suite 1" >
     <classes>
-      <class name="com.music.tests.UploadFileAndFindGenere_FireFox" />
+      <class name="com.music.tests.UploadFileAndFindGenere" />
    </classes>
  </test>
 </suite>
