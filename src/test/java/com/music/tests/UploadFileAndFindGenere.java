@@ -26,7 +26,8 @@ public class UploadFileAndFindGenere {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver");
 		}
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--no-sandbox");
+		//options.addArguments("--no-sandbox");
+		options.setBinary("/usr/bin/google-chrome");
 		driver = new ChromeDriver(options);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
