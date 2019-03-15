@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -24,6 +25,9 @@ public class UploadFileAndFindGenere {
 		}else if(System.getProperty("os.name").toLowerCase().contains("linux")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver");
 		}
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		driver = new ChromeDriver(options);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://localhost:8001/");
