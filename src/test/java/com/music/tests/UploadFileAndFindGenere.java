@@ -37,7 +37,7 @@ public class UploadFileAndFindGenere {
 		options.setBinary("/usr/bin/google-chrome");*/
 
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 /*
 		driver.get("http://localhost:8001/");
 
