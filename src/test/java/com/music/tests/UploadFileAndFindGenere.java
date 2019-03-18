@@ -20,11 +20,13 @@ public class UploadFileAndFindGenere {
 	public void TestCase() throws AWTException, InterruptedException {
 		System.out.println("Os Name : "+System.getProperty("os.name"));
                 System.out.println("Path : "+System.getProperty("user.dir")+"/");
+		String filePath = System.getProperty("user.dir");
 		if(System.getProperty("os.name").toLowerCase().contains("windows")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver.exe");
+			filePath = filePath + "\\" + "file_example_WAV_2MG.wav";
 		}else if(System.getProperty("os.name").toLowerCase().contains("linux")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver");
-			//
+			filePath = filePath + "/" + "file_example_WAV_2MG.wav";
 		}
 		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -53,7 +55,7 @@ public class UploadFileAndFindGenere {
 		System.out.println("Path : "+System.getProperty("user.dir")+"/"+"file_example_WAV_2MG.wav");
 		
 		//put path to your image in a clipboard
-	    StringSelection ss = new StringSelection(System.getProperty("user.dir")+"/"+"file_example_WAV_2MG.wav");
+	    StringSelection ss = new StringSelection(filePath);
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
 	    //imitate mouse events like ENTER, CTRL+C, CTRL+V
