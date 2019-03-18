@@ -23,23 +23,24 @@ public class UploadFileAndFindGenere {
 		if(System.getProperty("os.name").toLowerCase().contains("windows")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver.exe");
 		}else if(System.getProperty("os.name").toLowerCase().contains("linux")){
-			System.setProperty("webdriver.chrome.driver", "/usr/bin/"+"chromedriver");
-			//System.getProperty("user.dir")+"/"+"chromedriver"
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"chromedriver");
+			//
 		}
-		ChromeOptions options = new ChromeOptions();
-		/*options.addArguments("start-maximized"); // open Browser in maximized mode
+		/*ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized"); // open Browser in maximized mode
 		options.addArguments("disable-infobars"); // disabling infobars
 		options.addArguments("--disable-extensions"); // disabling extensions
 		options.addArguments("--disable-gpu"); // applicable to windows os only
 		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		options.addArguments("--no-sandbox"); // Bypass OS security model
 		options.addArguments("--no-sandbox");
-		options.setBinary("/usr/bin/google-chrome");*/
+		options.setBinary("/usr/bin/google-chrome");
 		options.addArguments("--whitelisted-ips=''");
-		options.addArguments("--proxy-server=localhost:8080");
-		driver = new ChromeDriver(options);
-		//driver.manage().window().maximize();
-/*
+		options.addArguments("--proxy-server=localhost:8080");*/
+		
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+
 		driver.get("http://localhost:8001/");
 
 		System.out.println("Title of the page : "+driver.getTitle());
@@ -75,7 +76,6 @@ public class UploadFileAndFindGenere {
 	    Thread.sleep(5000);
 	    
 	    driver.quit();
-*/
 	}
 	
 }
